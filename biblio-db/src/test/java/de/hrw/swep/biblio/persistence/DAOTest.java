@@ -4,17 +4,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import java.io.File;
-import java.sql.SQLException;
 
-import org.dbunit.DatabaseUnitException;
 import org.dbunit.IDatabaseTester;
 import org.dbunit.JdbcDatabaseTester;
-import org.dbunit.database.DatabaseConfig;
-import org.dbunit.database.IDatabaseConnection;
-import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
-import org.dbunit.ext.hsqldb.HsqldbDataTypeFactory;
-import org.dbunit.operation.DatabaseOperation;
+
 import org.junit.Before;
 import org.junit.Test;
 

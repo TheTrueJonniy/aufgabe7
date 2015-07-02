@@ -16,7 +16,7 @@ public class BibliothekTestMitMock {
 	 */
 	@Test
 	public void testSucheBuchNachTitel() {
-		fail("Not yet implemented");
+		fail("testSucheBuchNachTitel Not yet implemented");
 	}
 
 	/**
@@ -24,7 +24,7 @@ public class BibliothekTestMitMock {
 	 */
 	@Test
 	public void testSucheBuchNachAutor() {
-		fail("Not yet implemented");
+		fail("testSucheBuchNachAutor Not yet implemented");
 	}
 
 	/**
@@ -32,7 +32,7 @@ public class BibliothekTestMitMock {
 	 */
 	@Test
 	public void testSucheBenutzerNachName() {
-		fail("Not yet implemented");
+		fail("testSucheBenutzerNachName Not yet implemented");
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class BibliothekTestMitMock {
 	 */
 	@Test
 	public void testSucheBenutzerNachId() {
-		fail("Not yet implemented");
+		fail("testSucheBenutzerNachId Not yet implemented");
 	}
 
 }
