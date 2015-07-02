@@ -1,18 +1,18 @@
 package de.hrw.swep.biblio.persistence;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.io.File;
+import java.util.Set;
 
 import org.dbunit.IDatabaseTester;
 import org.dbunit.JdbcDatabaseTester;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
-
 import org.junit.Before;
 import org.junit.Test;
 
 import de.hrw.swep.biblio.persistence.dto.BenutzerDTO;
+import de.hrw.swep.biblio.persistence.dto.BuchDTO;
 
 /**
  * Testklasse fuer den Datenbankzugriff
@@ -53,7 +53,11 @@ public class DAOTest {
    */
   @Test
   public void testGetBenutzerByName() {
-    fail();
+    DAO dao = new DAO();
+    Set<BenutzerDTO> b = dao.getBenutzerByName("Adalbert Alt");
+    BenutzerDTO d = b.iterator().next();
+    assertEquals(1, d.getId());
+    assertEquals("Normal", d.getStatus());
   }
 
   /** 
@@ -61,7 +65,12 @@ public class DAOTest {
    */
   @Test
   public void testGetBuchByAutor() {
-    fail();
+    DAO dao = new DAO();
+    Set<BuchDTO> b = dao.getBuchByAutor("Karl Kaos");
+    BuchDTO d = b.iterator().next();
+    assertEquals("Lost and Found", d.getTitel());
+    assertEquals("Verloren", d.getStatus());
+    assertEquals(1, d.getId());
   }
 
   /**
@@ -69,6 +78,12 @@ public class DAOTest {
    */
   @Test
   public void testGetBuchByTitle() {
-    fail();
+    DAO dao = new DAO();
+    Set<BuchDTO> b = dao.getBuchByTitle("Lost and Found");
+    BuchDTO d = b.iterator().next();
+    assertEquals("Karl Kaos", d.getAutor());
+    assertEquals("Verloren", d.getStatus());
+    assertEquals(1, d.getId());
+    
   }
 }
